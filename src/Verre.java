@@ -11,11 +11,20 @@ public class Verre {
     }
 
     // Méthodes
-    public void remplir(int quantite) {
-        if (quantite > 0) {
-            this.quantite += quantite;
+    public void remplir(int volume) {
+        if (volume > 0) {
+            this.quantite += volume;
             if (this.quantite > this.contenance) {
                 this.quantite = this.contenance;
+            }
+        }
+    }
+
+    public void boire(int volume){
+        if (volume > 0) {
+            this.quantite -= volume;
+            if (this.quantite < 0) {
+                this.quantite = 0;
             }
         }
     }

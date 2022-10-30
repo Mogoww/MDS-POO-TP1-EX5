@@ -9,4 +9,20 @@ public class Bouteille {
         this.quantite = quantite;
         this.estOuverte = false;
     }
+
+    // méthodes
+    public void ouvrir(){
+        this.estOuverte = true;
+    }
+
+    public void fermer(){
+        this.estOuverte = false;
+    }
+
+    public void verserDans(Verre verre, int volume){
+        if (this.estOuverte){
+            this.quantite -= volume;
+            verre.remplir(volume);
+        }
+    }
 }
